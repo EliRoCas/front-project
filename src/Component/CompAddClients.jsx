@@ -31,7 +31,43 @@ const CompAddClients = () => {
     return (
         <div>
 
+            <h3>Formulario para Guardar Clientes</h3>
+            <form onSubmit={saveClients}>
+                <div className="mb-3">
+                    <label className="form-label">Nombre</label>
+                    <input value={name} onChange={(e) => setName(e.target.value)}
+                        type="text" className="form-control" />
+                </div>
+                <div className="mb-3">
+                    <label className="form-label">Apellidos</label>
+                    <input value={lastname} onChange={(e) => setLastname(e.target.value)}
+                        type="text" className="form-control" />
+                </div>
+                <div className="mb-3">
+                    <label className="form-label">Documento</label>
+                    <input value={idCard} onChange={(e) => setIdCard(e.target.value)}
+                        type="number" className="form-control" />
+                </div>
+                <div className="mb-3">
+                    <label className="form-label">Correo</label>
+                    <input value={email} onChange={(e) => setEmail(e.target.value)}
+                        type="text" className="form-control" />
+                </div>
+                <div className="mb-3">
+                    <label className="form-label">Teléfono</label>
+                    <input value={phone} onChange={(e) => setPhone(e.target.value)}
+                        type="number" className="form-control" />
+                </div>
+                <div className="mb-3">
+                    <label className="form-label">Dirección</label>
+                    <input value={adress} onChange={(e) => setAdress(e.target.value)}
+                        type="text" className="form-control" />
+                </div>
 
+                <button type="submit" className="btn btn-dark">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                </button>
+            </form>
         </div>
     )
 }

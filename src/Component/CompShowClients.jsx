@@ -40,7 +40,7 @@ const CompShowClients = () => {
                         {/* Se utiliza el componente link, de React router dom, para crear enlaces al interior de la app*/}
                         {/* Se utiliza bootstrap y sus clases predeterminadas para elegir el botón y
                         las márgenes top - botton (mt-mb) */}
-                        <Link to='/clients/add' className='btn btn-dark mt-2 mb-2'>
+                        <Link to='/clients/add/' className='btn btn-dark mt-2 mb-2'>
                             <i className="fa-solid fa-user-plus"></i>
                         </Link>
 
