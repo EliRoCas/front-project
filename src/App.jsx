@@ -4,6 +4,8 @@ import './App.css'
 import CompShowClients from './Component/CompShowClients'
 import CompAddClients from './Component/CompAddClients'
 
+import CompFooter from './Component/CompFooter'
+
 // Se importan las rutas (Router)
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
@@ -68,6 +70,7 @@ function App() {
           </Routes>
         </BrowserRouter>
 
+        <CompFooter />
       </div>
     </>
   )
