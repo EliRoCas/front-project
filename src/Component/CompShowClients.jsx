@@ -36,6 +36,7 @@ const CompShowClients = () => {
         <>
             <div className='container'>
                 <div className='row'>
+
                     <div className='col'>
                         {/* Se utiliza el componente link, de React router dom, para crear enlaces al interior de la app*/}
                         {/* Se utiliza bootstrap y sus clases predeterminadas para elegir el botón y
@@ -45,49 +46,51 @@ const CompShowClients = () => {
                         </Link>
 
 
-                        <table className="table table-dark table-hover">
-                            <thead className='table-light'>
-                                <tr>
-                                    <th>Client Name</th>
-                                    <th>Client Lastname</th>
-                                    <th>ID Card</th>
-                                    <th>email</th>
-                                    <th>Phone Number </th>
-                                    <th>Adress</th>
-                                    <th>Acctions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {/* Se utliliza el método 'map' para recorrer cada elemento del array 'clients'
-                                y con ello generar una fila en la tabla, para cada cliente*/}
-                                {clients.map((client, index) => (
-
-                                    <tr key={index}>
-                                        <td>{client.name}</td>
-                                        <td>{client.lastName}</td>
-                                        <td>{client.idCard}</td>
-                                        <td>{client.email}</td>
-                                        <td>{client.phone}</td>
-                                        <td>{client.adress}</td>
-                                        {/* Se añaden botones en la séptima celda de la fila de la tabla para editar y eliminar el cliente. */}
-                                        <td>
-                                            {/* Se crea un enlace para editar el cliente, que lleva al usuario a la página de edición del cliente con su ID. */}
-                                            <Link to={`/clients/edit/${client._id}`} className='btn btn-secondary mt-2 mb-2'>
-                                                <i className="fa-solid fa-pen-to-square"></i>
-                                            </Link>
-                                            {/* Se añade un botón para eliminar el cliente. */}
-                                            <button onClick={() => deleteClients(client._id)} className="btn btn-danger">
-                                                <i className="fa-solid fa-trash-can"></i>
-                                            </button>
-                                        </td>
+                        <div className="table-responsive">
+                            <table className="table table-dark table-hover">
+                                <thead className='table-light'>
+                                    <tr>
+                                        <th>Client Name</th>
+                                        <th>Client Lastname</th>
+                                        <th>ID Card</th>
+                                        <th>email</th>
+                                        <th>Phone Number </th>
+                                        <th>Adress</th>
+                                        <th>Acctions</th>
                                     </tr>
+                                </thead>
+                                <tbody>
+                                    {/* Se utliliza el método 'map' para recorrer cada elemento del array 'clients'
+                                y con ello generar una fila en la tabla, para cada cliente*/}
+                                    {clients.map((client, index) => (
 
-                                ))}
-                            </tbody>
-                        </table>
+                                        <tr key={index}>
+                                            <td>{client.name}</td>
+                                            <td>{client.lastName}</td>
+                                            <td>{client.idCard}</td>
+                                            <td>{client.email}</td>
+                                            <td>{client.phone}</td>
+                                            <td>{client.adress}</td>
+                                            {/* Se añaden botones en la séptima celda de la fila de la tabla para editar y eliminar el cliente. */}
+                                            <td>
+                                                {/* Se crea un enlace para editar el cliente, que lleva al usuario a la página de edición del cliente con su ID. */}
+                                                <Link to={`/clients/edit/${client._id}`} className='btn btn-secondary mt-2 mb-2'>
+                                                    <i className="fa-solid fa-pen-to-square"></i>
+                                                </Link>
+                                                {/* Se añade un botón para eliminar el cliente. */}
+                                                <button onClick={() => deleteClients(client._id)} className="btn btn-danger">
+                                                    <i className="fa-solid fa-trash-can"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div >
 
         </>
     )
