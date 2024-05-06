@@ -6,7 +6,7 @@ const URL = 'http://localhost:5000/apiClients/clients/';
 
 const CompAddClients = () => {
     const [name, setName] = useState('');
-    const [lastname, setLastname] = useState('');
+    const [lastName, setLastname] = useState('');
     const [idCard, setIdCard] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -19,7 +19,7 @@ const CompAddClients = () => {
 
         await axios.post(URL, {
             name: name,
-            lastname: lastname,
+            lastName: lastName,
             idCard: idCard,
             email: email,
             phone: phone,
@@ -40,7 +40,7 @@ const CompAddClients = () => {
                 </div>
                 <div className="mb-3">
                     <label className="form-label">Apellidos</label>
-                    <input value={lastname} onChange={(e) => setLastname(e.target.value)}
+                    <input value={lastName} onChange={(e) => setLastname(e.target.value)}
                         type="text" className="form-control" />
                 </div>
                 <div className="mb-3">

@@ -3,6 +3,7 @@ import './App.css'
 // Se importan los componentes 
 import CompShowClients from './Component/CompShowClients'
 import CompAddClients from './Component/CompAddClients'
+import CompEditClients from './Component/CompEditClients'
 
 import CompFooter from './Component/CompFooter'
 
@@ -67,6 +68,7 @@ function App() {
           Cuando la URL coincide exactamente con "/clients/", se renderizará el componente dado*/}
             <Route path='/clients/' element={<CompShowClients />} />
             <Route path='/clients/add/' element={<CompAddClients />} />
+            <Route path='/clients/edit/:id' element={<CompEditClients />} />
           </Routes>
         </BrowserRouter>
 
