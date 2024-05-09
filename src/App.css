@@ -47,3 +47,9 @@
 footer-title{
   font-size: 1em;
 }
+div.form-check .form-check-input {
+  float: none;
+ width: 1.5em;
+ height: 1.5em;
+ border: 0.2em  solid #000000;
+} 

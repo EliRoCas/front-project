@@ -65,7 +65,7 @@ const CompAddClients = () => {
                 </div>
 
                 <button type="submit" className="btn btn-dark">
-                    <i class="fa-solid fa-floppy-disk"></i>
+                    <i className="fa-solid fa-floppy-disk"></i>
                 </button>
             </form>
         </div>

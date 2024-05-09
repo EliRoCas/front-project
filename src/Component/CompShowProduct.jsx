@@ -6,30 +6,30 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 
 
-// Se define la URL de la API donde se encuentran los endpoints para interactuar con los clientes
-const URL = 'http://localhost:5000/apiClients/clients/';
+// Se define la URL de la API donde se encuentran los endpoints 
+const URL = 'http://localhost:5000/apiClients/Products/';
 
-const CompShowClients = () => {
+const CompShowProducts = () => {
 
     // Se utiliza el hook useState para definir el estado 'clients', que almacenará la lista de clientes
-    const [clients, setClients] = useState([]);
+    const [products, setProducts] = useState([]);
 
     // Se utiliza el hook useEffect para cargar los clientes al montar el componente
     useEffect(() => {
-        getClients()
+        getProducts()
     },
         [])
 
     //GET - Función para mostrar los clientes 
-    const getClients = async () => {
+    const getProducts = async () => {
         const result = await axios.get(URL);
-        setClients(result.data);
+        setProducts(result.data);
     }
 
     // DELETE - Función para eliminar clientes 
-    const deleteClients = async (id) => {
+    const deleteProdcut = async (id) => {
         await axios.delete(`${URL}${id}`);
-        getClients(); // Se recarga la lista de clientes después de eliminar uno
+        getProducts(); // Se recarga la lista de clientes después de eliminar uno
     }
 
     return (
@@ -41,8 +41,8 @@ const CompShowClients = () => {
                         {/* Se utiliza el componente link, de React router dom, para crear enlaces al interior de la app*/}
                         {/* Se utiliza bootstrap y sus clases predeterminadas para elegir el botón y
                         las márgenes top - botton (mt-mb) */}
-                        <Link to='/clients/add/' className='btn btn-dark mt-2 mb-2'>
-                            <i className="fa-solid fa-user-plus"></i>
+                        <Link to='/products/add/' className='btn btn-dark mt-2 mb-2'>
+                        <i className="fa-solid fa-circle-plus"></i>
                         </Link>
 
 
@@ -50,35 +50,30 @@ const CompShowClients = () => {
                             <table className="table table-dark table-hover">
                                 <thead className='table-light'>
                                     <tr>
-                                        <th>Nombres</th>
-                                        <th>Apellidos</th>
-                                        <th>Documento</th>
-                                        <th>Correo</th>
-                                        <th>Teléfono</th>
-                                        <th>Dirección</th>
-                                        <th>Acciones</th>
+                                        <th>Nombre </th>
+                                        <th>Tipo</th>
+                                        <th>Precio</th>
+                                        <th>Para mayores de edad</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {/* Se utliliza el método 'map' para recorrer cada elemento del array 'clients'
                                 y con ello generar una fila en la tabla, para cada cliente*/}
-                                    {clients.map((client, index) => (
+                                    {products.map((product, index) => (
 
                                         <tr key={index}>
-                                            <td>{client.name}</td>
-                                            <td>{client.lastName}</td>
-                                            <td>{client.idCard}</td>
-                                            <td>{client.email}</td>
-                                            <td>{client.phone}</td>
-                                            <td>{client.adress}</td>
+                                            <td>{product.name}</td>
+                                            <td>{product.type}</td>
+                                            <td>{product.price}</td>
+                                            <td>{product.over18 ? "Sí" : "No"}</td>
                                             {/* Se añaden botones en la séptima celda de la fila de la tabla para editar y eliminar el cliente. */}
                                             <td>
                                                 {/* Se crea un enlace para editar el cliente, que lleva al usuario a la página de edición del cliente con su ID. */}
-                                                <Link to={`/clients/edit/${client._id}`} className='btn btn-secondary mt-2 mb-2'>
+                                                <Link to={`/products/edit/${product._id}`} className='btn btn-secondary mt-2 mb-2'>
                                                     <i className="fa-solid fa-pen-to-square"></i>
                                                 </Link>
                                                 {/* Se añade un botón para eliminar el cliente. */}
-                                                <button onClick={() => deleteClients(client._id)} className="btn btn-danger">
+                                                <button onClick={() => deleteProdcut(product._id)} className="btn btn-danger">
                                                     <i className="fa-solid fa-trash-can"></i>
                                                 </button>
                                             </td>
@@ -96,4 +91,4 @@ const CompShowClients = () => {
     )
 }
 
-export default CompShowClients; 
+export default CompShowProducts; 

@@ -1,9 +1,15 @@
 import './App.css'
 
-// Se importan los componentes 
+// Se importan los componentes para el cliente 
 import CompShowClients from './Component/CompShowClients'
 import CompAddClients from './Component/CompAddClients'
 import CompEditClients from './Component/CompEditClients'
+
+// Se importan los componentes para el producto
+import CompShowProducts from './Component/CompShowProduct'
+import CompAddProduct from './Component/CompAddProduct'
+import CompEditProducts from './Component/CompEditProduct'
+
 
 import CompFooter from './Component/CompFooter'
 
@@ -69,6 +75,13 @@ function App() {
             <Route path='/clients/' element={<CompShowClients />} />
             <Route path='/clients/add/' element={<CompAddClients />} />
             <Route path='/clients/edit/:id' element={<CompEditClients />} />
+
+            <Route path='/products/' element={<CompShowProducts />} />
+            <Route path='/products/add/' element={<CompAddProduct/>} />
+            <Route path='/products/edit/:id/' element={<CompEditProducts/>} />
+
+
+            
           </Routes>
         </BrowserRouter>
 
