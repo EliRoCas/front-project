@@ -2,7 +2,10 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const URL = 'http://localhost:5000/apiClients/Products/';
+// const URL = 'http://localhost:5000/apiClients/Products/';
+
+// Se define este URL para la versión de despliegue
+const URL = 'https://tech-deployment.onrender.com/apiClients/Products/';
 
 // Se crea la función componente, para editar los clientes
 const CompEditProducts = () => {

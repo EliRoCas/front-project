@@ -7,7 +7,10 @@ import { useState, useEffect } from 'react'
 
 
 // Se define la URL de la API donde se encuentran los endpoints para interactuar con los clientes
-const URL = 'http://localhost:5000/apiClients/clients/';
+// const URL = 'http://localhost:5000/apiClients/clients/';
+
+// Se define este URL para la versión de despliegue
+const URL = 'https://tech-deployment.onrender.com/apiClients/clients/';
 
 const CompShowClients = () => {
 
