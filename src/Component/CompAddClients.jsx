@@ -3,9 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 // const URL = 'http://localhost:5000/apiClients/clients/';
+const URL = `${import.meta.env.VITE_SERVER_URL}/clients/`;
 
 // Se define este URL para la versión de despliegue
-const URL = 'https://tech-deployment.onrender.com/apiClients/clients';
+//const URL = 'https://tech-deployment.onrender.com/apiClients/clients';
 
 const CompAddClients = () => {
     const [name, setName] = useState('');

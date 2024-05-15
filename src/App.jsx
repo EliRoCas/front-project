@@ -47,12 +47,12 @@ function App() {
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="apiClients/clients" >
+                    <a className="nav-link" href="/apiClients/clients" >
                       Clientes
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="apiClients/products">
+                    <a className="nav-link" href="/apiClients/products">
                       Productos
                     </a>
                   </li>
@@ -72,13 +72,13 @@ function App() {
           <Routes>
             {/* en el path agregamos el nombre de la ruta que verá nuestro usuario 
           Cuando la URL coincide exactamente con "/clients/", se renderizará el componente dado*/}
-            <Route path='apiClients/clients/' element={<CompShowClients />} />
-            <Route path='apiClients/clients/add/' element={<CompAddClients />} />
-            <Route path='apiClients/clients/edit/:id' element={<CompEditClients />} />
+            <Route path='/apiClients/clients/' element={<CompShowClients />} />
+            <Route path='/apiClients/clients/add/' element={<CompAddClients />} />
+            <Route path='/apiClients/clients/edit/:id' element={<CompEditClients />} />
 
-            <Route path='apiClients/products/' element={<CompShowProducts />} />
-            <Route path='apiClients/products/add/' element={<CompAddProduct/>} />
-            <Route path='apiClients/products/edit/:id/' element={<CompEditProducts/>} />
+            <Route path='/apiClients/products/' element={<CompShowProducts />} />
+            <Route path='/apiClients/products/add/' element={<CompAddProduct/>} />
+            <Route path='/apiClients/products/edit/:id/' element={<CompEditProducts/>} />
 
 
             
