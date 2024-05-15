@@ -5,7 +5,7 @@ import { useState } from "react";
 // const URL = 'http://localhost:5000/apiClients/Products/';
 
 // Se define este URL para la versión de despliegue
-const URL = 'https://tech-deployment.onrender.com/apiClients/Products/';
+const URL = 'https://tech-deployment.onrender.com/apiClients/products';
 
 
 const CompAddProduct = () => {

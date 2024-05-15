@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 // const URL = 'http://localhost:5000/apiClients/clients/';
 
 // Se define este URL para la versión de despliegue
-const URL = 'https://tech-deployment.onrender.com/apiClients/clients/';
+const URL = 'https://tech-deployment.onrender.com/apiClients/clients';
 
 // Se crea la función componente, para editar los clientes
 const CompEditClients = () => {
