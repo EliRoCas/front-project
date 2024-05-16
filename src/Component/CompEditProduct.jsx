@@ -13,7 +13,7 @@ const CompEditProducts = () => {
     const [name, setName] = useState('');
     const [type, setType] = useState('');
     const [price, setPrice] = useState('');
-    const [over18, setOver18] = useState('');
+    const [over18, setOver18] = useState(false);
     const navigate = useNavigate();
     const { id } = useParams();
 
@@ -27,7 +27,7 @@ const CompEditProducts = () => {
             price: price,
             over18: over18
         })
-        navigate('/products/');
+        navigate('/apiClients/products/');
     };
 
     useEffect(() => {
@@ -54,12 +54,12 @@ const CompEditProducts = () => {
                 </div>
                 <div className="mb-3">
                     <label className="form-label">Tipo</label>
-                    <input value={type} onChange={(e) => setLastname(e.target.value)}
+                    <input value={type} onChange={(e) => setType(e.target.value)}
                         type="text" className="form-control" />
                 </div>
                 <div className="mb-3">
                     <label className="form-label">Precio</label>
-                    <input value={price} onChange={(e) => setIdCard(e.target.value)}
+                    <input value={price} onChange={(e) => setPrice(e.target.value)}
                         type="number" className="form-control" />
                 </div>
 

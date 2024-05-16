@@ -29,7 +29,7 @@ const CompAddClients = () => {
             phone: phone,
             adress: adress
         })
-        navigate('/clients')
+        navigate('/apiClients/clients')
     }
 
     return (

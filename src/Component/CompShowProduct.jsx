@@ -31,7 +31,7 @@ const CompShowProducts = () => {
     }
 
     // DELETE - Función para eliminar clientes 
-    const deleteProdcut = async (id) => {
+    const deleteProduct = async (id) => {
         await axios.delete(`${URL}${id}`);
         getProducts(); // Se recarga la lista de clientes después de eliminar uno
     }
@@ -77,7 +77,7 @@ const CompShowProducts = () => {
                                                     <i className="fa-solid fa-pen-to-square"></i>
                                                 </Link>
                                                 {/* Se añade un botón para eliminar el cliente. */}
-                                                <button onClick={() => deleteProdcut(product._id)} className="btn btn-danger">
+                                                <button onClick={() => deleteProduct(product._id)} className="btn btn-danger">
                                                     <i className="fa-solid fa-trash-can"></i>
                                                 </button>
                                             </td>

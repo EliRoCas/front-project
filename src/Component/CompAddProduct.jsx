@@ -13,7 +13,7 @@ const CompAddProduct = () => {
     const [name, setName] = useState('');
     const [type, setType] = useState('');
     const [price, setPrice] = useState('');
-    const [over18, setOver18] = useState('');
+    const [over18, setOver18] = useState(false);
     const navigate = useNavigate();
 
 
@@ -27,7 +27,7 @@ const CompAddProduct = () => {
             price: price,
             over18: over18
         })
-        navigate('/products')
+        navigate('/apiClients/products')
     }
 
     return (
