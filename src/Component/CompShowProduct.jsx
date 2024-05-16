@@ -45,7 +45,7 @@ const CompShowProducts = () => {
                         {/* Se utiliza el componente link, de React router dom, para crear enlaces al interior de la app*/}
                         {/* Se utiliza bootstrap y sus clases predeterminadas para elegir el botón y
                         las márgenes top - botton (mt-mb) */}
-                        <Link to='/products/add/' className='btn btn-dark mt-2 mb-2'>
+                        <Link to='/apiClients/products/add/' className='btn btn-dark mt-2 mb-2'>
                         <i className="fa-solid fa-circle-plus"></i>
                         </Link>
 
@@ -73,7 +73,7 @@ const CompShowProducts = () => {
                                             {/* Se añaden botones en la séptima celda de la fila de la tabla para editar y eliminar el cliente. */}
                                             <td>
                                                 {/* Se crea un enlace para editar el cliente, que lleva al usuario a la página de edición del cliente con su ID. */}
-                                                <Link to={`/products/edit/${product._id}`} className='btn btn-secondary mt-2 mb-2'>
+                                                <Link to={`/apiClients/products/edit/${product._id}`} className='btn btn-secondary mt-2 mb-2'>
                                                     <i className="fa-solid fa-pen-to-square"></i>
                                                 </Link>
                                                 {/* Se añade un botón para eliminar el cliente. */}
